@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import sidebar from './sidebar.json' with { type: 'json' }
 
 export default defineConfig({
+  base: '/hermes-notes/',
   title: 'Hermes Notes',
   description: '个人学习笔记 · 由 Hermes Agent 驱动',
   lang: 'zh-CN',
