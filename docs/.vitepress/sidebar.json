@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "详解：从本地笔记到GitHub Pages — Vitepr...",
+        "link": "/notes/0006-详解：从本地笔记到GitHub-Pages-—-Vitepress自动化部署全流程"
+      },
+      {
         "text": "Hermes Notes 公网访问方案分析",
         "link": "/notes/0005-Hermes-Notes-公网访问方案分析"
       },
@@ -30,8 +34,16 @@
         "link": "/tags/architecture"
       },
       {
+        "text": "ci-cd (1)",
+        "link": "/tags/ci-cd"
+      },
+      {
         "text": "cli (1)",
         "link": "/tags/cli"
+      },
+      {
+        "text": "github-pages (1)",
+        "link": "/tags/github-pages"
       },
       {
         "text": "hermes-notes (1)",
@@ -50,11 +62,15 @@
         "link": "/tags/tunnel"
       },
       {
+        "text": "tutorial (1)",
+        "link": "/tags/tutorial"
+      },
+      {
         "text": "usage (1)",
         "link": "/tags/usage"
       },
       {
-        "text": "vitepress (1)",
+        "text": "vitepress (2)",
         "link": "/tags/vitepress"
       }
     ]
