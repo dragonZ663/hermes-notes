@@ -1,0 +1,66 @@
+[
+  {
+    "text": "📝 最新笔记",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Hermes Notes 公网访问方案分析",
+        "link": "/notes/0005-Hermes-Notes-公网访问方案分析"
+      },
+      {
+        "text": "Hermes Notes CLI",
+        "link": "/notes/0004-Hermes-Notes-CLI"
+      }
+    ]
+  },
+  {
+    "text": "🏷️ 标签分类",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "🏷️ 标签总览",
+        "link": "/tags/"
+      },
+      {
+        "text": "analysis (1)",
+        "link": "/tags/analysis"
+      },
+      {
+        "text": "architecture (1)",
+        "link": "/tags/architecture"
+      },
+      {
+        "text": "cli (1)",
+        "link": "/tags/cli"
+      },
+      {
+        "text": "hermes-notes (1)",
+        "link": "/tags/hermes-notes"
+      },
+      {
+        "text": "network (1)",
+        "link": "/tags/network"
+      },
+      {
+        "text": "notes (1)",
+        "link": "/tags/notes"
+      },
+      {
+        "text": "tunnel (1)",
+        "link": "/tags/tunnel"
+      },
+      {
+        "text": "usage (1)",
+        "link": "/tags/usage"
+      },
+      {
+        "text": "vitepress (1)",
+        "link": "/tags/vitepress"
+      }
+    ]
+  },
+  {
+    "text": "📋 笔记总览",
+    "link": "/notes/"
+  }
+]

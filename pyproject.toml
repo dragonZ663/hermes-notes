@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-notes"
+version = "1.0.0"
+description = "Hermes Agent 学习笔记系统 — Python API + SQLite + Vitepress 文档站点"
+readme = "README.md"
+authors = [{ name = "Hermes Notes" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["notes", "vitepress", "knowledge-base", "hermes-agent"]
+
+# Python 运行时依赖 — 零第三方包
+# 全部使用标准库：sqlite3, json, os, re, datetime, pathlib, collections, argparse
+dependencies = []
+
+# Node.js 依赖（Vitepress 文档站点）在 docs/package.json 中管理
+# 见：cd ~/.hermes/notes/docs && npm install
+
+[project.optional-dependencies]
+dev = ["ruff>=0.7", "pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/nousresearch/hermes-agent"
+Documentation = "https://hermes-agent.nousresearch.com/docs"
+
+[project.scripts]
+hermes-notes = "notes_cli:cli_main"
+
+[tool.setuptools]
+py-modules = ["notes_api", "notes_cli", "sync_vitepress", "demo", "daily_summary"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

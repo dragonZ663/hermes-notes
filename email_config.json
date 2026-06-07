@@ -1,0 +1,7 @@
+{
+  "smtp_host": "smtp.163.com",
+  "smtp_port": 465,
+  "from_email": "feilongzhang2026@163.com",
+  "password": "GUh8FYqpwnx2wixp",
+  "to_email": "feilongzhang2026@163.com"
+}
