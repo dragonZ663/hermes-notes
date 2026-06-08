@@ -90,6 +90,50 @@ Actions 触发（.github/workflows/deploy.yml）
 
 这就是**「推送即上线」**的完整链路。
 
+完整的 `deploy.yml` 文件（位于 `.github/workflows/`）：
+
+```yaml
+name: Deploy Vitepress to Pages
+
+on:
+  push:
+    branches: [main]        # 推送到 main 分支时触发
+  workflow_dispatch:         # 也可以手动触发
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # 避免 Node 20 弃用警告
+
+permissions:
+  contents: read            # 读取代码
+  pages: write              # 写入 Pages
+  id-token: write           # OIDC 身份验证
+
+concurrency:
+  group: pages
+  cancel-in-progress: true  # 新的推送自动取消正在跑的旧构建
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./docs    # 所有命令在 docs/ 目录下执行
+
+    steps:
+      - uses: actions/checkout@v4              # ① 拉取代码
+      - uses: actions/setup-node@v4            # ② 安装 Node.js
+        with:
+          node-version-file: 'docs/.node-version'
+          cache: 'npm'
+          cache-dependency-path: 'docs/package-lock.json'
+      - run: npm ci                             # ③ 安装依赖
+      - run: npm run build                      # ④ 构建静态站点
+      - uses: actions/upload-pages-artifact@v3  # ⑤ 上传构建产物
+        with:
+          path: docs/.vitepress/dist
+      - uses: actions/deploy-pages@v4           # ⑥ 部署到 GitHub Pages
+```
+
 ---
 
 ## 完整数据流
