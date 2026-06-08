@@ -12,8 +12,6 @@ tags:
 
 # Vitepress + GitHub Pages 自动化部署指南
 
-# 详解：从本地笔记到 GitHub Pages
-
 ## 一个简单的问题
 
 你在本地写了一篇 Markdown 笔记，想让全世界都能看到它。怎么做到？
