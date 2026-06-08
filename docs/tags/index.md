@@ -18,4 +18,4 @@
 | [tutorial](/tags/tutorial) | 1 |
 | [usage](/tags/usage) | 1 |
 | [vitepress](/tags/vitepress) | 2 |
-| [wwb-security](/tags/wwb-security) | 1 |
+| [web-security](/tags/web-security) | 1 |

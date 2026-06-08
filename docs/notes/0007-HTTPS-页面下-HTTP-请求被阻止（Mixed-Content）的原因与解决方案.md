@@ -6,7 +6,7 @@ source: "weixin"
 tags:
   - http
   - https
-  - wwb-security
+  - web-security
 ---
 
 # HTTPS 页面下 HTTP 请求被阻止（Mixed Content）的原因与解决方案
