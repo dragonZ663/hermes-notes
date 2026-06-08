@@ -4,7 +4,11 @@
     "collapsed": false,
     "items": [
       {
-        "text": "Vitepress + GitHub Pages 自动化部署指南",
+        "text": "HTTPS 页面下 HTTP 请求被阻止（Mixed Con...",
+        "link": "/notes/0007-HTTPS-页面下-HTTP-请求被阻止（Mixed-Content）的原因与解决方案"
+      },
+      {
+        "text": "详解：从本地笔记到GitHub Pages — Vitepr...",
         "link": "/notes/0006-详解：从本地笔记到GitHub-Pages-—-Vitepress自动化部署全流程"
       },
       {
@@ -50,6 +54,14 @@
         "link": "/tags/hermes-notes"
       },
       {
+        "text": "http (1)",
+        "link": "/tags/http"
+      },
+      {
+        "text": "https (1)",
+        "link": "/tags/https"
+      },
+      {
         "text": "network (1)",
         "link": "/tags/network"
       },
@@ -72,6 +84,10 @@
       {
         "text": "vitepress (2)",
         "link": "/tags/vitepress"
+      },
+      {
+        "text": "wwb-security (1)",
+        "link": "/tags/wwb-security"
       }
     ]
   },
