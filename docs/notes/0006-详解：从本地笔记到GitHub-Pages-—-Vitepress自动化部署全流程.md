@@ -197,6 +197,31 @@ permissions:
 
 GitHub Actions 默认只有读取权限。要发布到 Pages，必须显式授予 pages: write 权限。
 
+### GitHub Pages 子路径的规则
+
+``` 
+https://dragonZ663.github.io/hermes-notes/
+         └── 用户名 ──┘└── 仓库名 = 子路径 ──┘
+```
+
+**这是 GitHub 自动生成的，规则很简单：**
+
+| 仓库名 | 访问地址 | base 值 |
+|--------|---------|---------|
+| `hermes-notes` | `https://user.github.io/hermes-notes/` | `base: '/hermes-notes/'` |
+| `my-blog` | `https://user.github.io/my-blog/` | `base: '/my-blog/'` |
+| `dragonZ663.github.io` | `https://dragonZ663.github.io/`（无子路径） | `base: '/'` |
+
+**关键结论：** 子路径就等于仓库名。改仓库名，子路径也跟着变。
+
+**要去掉子路径有两种方式：**
+
+1. **用户站点仓库** — 把仓库改名为 `dragonZ663.github.io`，部署后直接用 `https://dragonZ663.github.io/` 访问，没有子路径
+2. **自定义域名** — 在 Settings → Pages 绑定自己的域名（如 `notes.feilo.ng`），绕开子路径
+
+但不管哪种方式，Vitepress 的 `base` 必须和实际访问路径保持一致，否则 CSS/JS 资源全部 404。
+
+---
 ---
 
 ## 日常使用流程
