@@ -1,6 +1,6 @@
 ---
 id: 6
-title: "详解：从本地笔记到GitHub Pages — Vitepress自动化部署全流程"
+title: "Vitepress + GitHub Pages 自动化部署指南"
 created: "2026-06-07 15:19:01"
 source: "cli"
 tags:
@@ -10,7 +10,7 @@ tags:
   - tutorial
 ---
 
-# 详解：从本地笔记到GitHub Pages — Vitepress自动化部署全流程
+# Vitepress + GitHub Pages 自动化部署指南
 
 # 详解：从本地笔记到 GitHub Pages
 
