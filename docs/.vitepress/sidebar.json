@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Docker 技术详解 — 是什么、优势、原理",
+        "link": "/notes/0011-Docker-技术详解-—-是什么、优势、原理"
+      },
+      {
         "text": "pip install -e . — 详解可编辑安装模式",
         "link": "/notes/0010-pip-install--e-.-—-详解可编辑安装模式"
       },
@@ -74,6 +78,14 @@
         "link": "/tags/cli"
       },
       {
+        "text": "devops (1)",
+        "link": "/tags/devops"
+      },
+      {
+        "text": "docker (1)",
+        "link": "/tags/docker"
+      },
+      {
         "text": "github-pages (1)",
         "link": "/tags/github-pages"
       },
@@ -112,14 +124,6 @@
       {
         "text": "tunnel (1)",
         "link": "/tags/tunnel"
-      },
-      {
-        "text": "tutorial (1)",
-        "link": "/tags/tutorial"
-      },
-      {
-        "text": "usage (1)",
-        "link": "/tags/usage"
       }
     ]
   },
