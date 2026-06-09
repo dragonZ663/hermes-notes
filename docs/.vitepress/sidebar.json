@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "pip install -e . — 详解可编辑安装模式",
+        "link": "/notes/0010-pip-install--e-.-—-详解可编辑安装模式"
+      },
+      {
         "text": "Deep Agents vs Hermes Agent — ...",
         "link": "/notes/0009-Deep-Agents-vs-Hermes-Agent-—-能力对比"
       },
@@ -98,6 +102,14 @@
         "link": "/tags/notes"
       },
       {
+        "text": "pip (1)",
+        "link": "/tags/pip"
+      },
+      {
+        "text": "python (1)",
+        "link": "/tags/python"
+      },
+      {
         "text": "tunnel (1)",
         "link": "/tags/tunnel"
       },
@@ -108,14 +120,6 @@
       {
         "text": "usage (1)",
         "link": "/tags/usage"
-      },
-      {
-        "text": "vitepress (2)",
-        "link": "/tags/vitepress"
-      },
-      {
-        "text": "web-security (1)",
-        "link": "/tags/web-security"
       }
     ]
   },

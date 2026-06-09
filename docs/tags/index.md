@@ -1,6 +1,6 @@
 # 🏷️ 标签分类
 
-共 **20** 个标签，**6** 篇笔记。
+共 **22** 个标签，**7** 篇笔记。
 
 | 标签 | 笔记数 |
 |------|--------|
@@ -19,6 +19,8 @@
 | [langchain](/tags/langchain) | 1 |
 | [network](/tags/network) | 1 |
 | [notes](/tags/notes) | 1 |
+| [pip](/tags/pip) | 1 |
+| [python](/tags/python) | 1 |
 | [tunnel](/tags/tunnel) | 1 |
 | [tutorial](/tags/tutorial) | 1 |
 | [usage](/tags/usage) | 1 |
