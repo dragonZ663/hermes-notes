@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Deep Agents vs Hermes Agent — ...",
+        "link": "/notes/0009-Deep-Agents-vs-Hermes-Agent-—-能力对比"
+      },
+      {
         "text": "AI 应用开发工程师 · 学习计划（修正版 v3）",
         "link": "/notes/0008-AI-应用开发工程师-·-学习计划（修正版-v3）"
       },
@@ -32,6 +36,10 @@
       {
         "text": "🏷️ 标签总览",
         "link": "/tags/"
+      },
+      {
+        "text": "agent (1)",
+        "link": "/tags/agent"
       },
       {
         "text": "ai-dev (1)",
@@ -76,6 +84,10 @@
       {
         "text": "https (1)",
         "link": "/tags/https"
+      },
+      {
+        "text": "langchain (1)",
+        "link": "/tags/langchain"
       },
       {
         "text": "network (1)",

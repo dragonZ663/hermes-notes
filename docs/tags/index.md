@@ -1,9 +1,10 @@
 # 🏷️ 标签分类
 
-共 **18** 个标签，**5** 篇笔记。
+共 **20** 个标签，**6** 篇笔记。
 
 | 标签 | 笔记数 |
 |------|--------|
+| [agent](/tags/agent) | 1 |
 | [ai-dev](/tags/ai-dev) | 1 |
 | [ai-learning-plan](/tags/ai-learning-plan) | 1 |
 | [analysis](/tags/analysis) | 1 |
@@ -15,6 +16,7 @@
 | [hermes-notes](/tags/hermes-notes) | 1 |
 | [http](/tags/http) | 1 |
 | [https](/tags/https) | 1 |
+| [langchain](/tags/langchain) | 1 |
 | [network](/tags/network) | 1 |
 | [notes](/tags/notes) | 1 |
 | [tunnel](/tags/tunnel) | 1 |
