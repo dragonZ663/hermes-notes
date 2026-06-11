@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "WebWright 主流程分析",
+        "link": "/notes/0013-WebWright-主流程分析"
+      },
+      {
         "text": "cwd 与 PYTHONPATH 的区别详解",
         "link": "/notes/0012-cwd-与-PYTHONPATH-的区别详解"
       },
@@ -66,7 +70,7 @@
         "link": "/tags/analysis"
       },
       {
-        "text": "architecture (1)",
+        "text": "architecture (2)",
         "link": "/tags/architecture"
       },
       {
@@ -126,7 +130,7 @@
         "link": "/tags/pip"
       },
       {
-        "text": "python (2)",
+        "text": "python (3)",
         "link": "/tags/python"
       }
     ]
