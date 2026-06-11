@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "cwd 与 PYTHONPATH 的区别详解",
+        "link": "/notes/0012-cwd-与-PYTHONPATH-的区别详解"
+      },
+      {
         "text": "Docker 技术详解 — 是什么、优势、原理",
         "link": "/notes/0011-Docker-技术详解-—-是什么、优势、原理"
       },
@@ -78,6 +82,10 @@
         "link": "/tags/cli"
       },
       {
+        "text": "debugging (1)",
+        "link": "/tags/debugging"
+      },
+      {
         "text": "devops (1)",
         "link": "/tags/devops"
       },
@@ -118,12 +126,8 @@
         "link": "/tags/pip"
       },
       {
-        "text": "python (1)",
+        "text": "python (2)",
         "link": "/tags/python"
-      },
-      {
-        "text": "tunnel (1)",
-        "link": "/tags/tunnel"
       }
     ]
   },
