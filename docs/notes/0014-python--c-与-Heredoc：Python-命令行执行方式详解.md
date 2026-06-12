@@ -11,7 +11,6 @@ tags:
 
 # python -c 与 Heredoc：Python 命令行执行方式详解
 
-# python -c 与 Heredoc：Python 命令行执行方式详解
 
 ## 一、`python -c` — 命令行直接执行
 
