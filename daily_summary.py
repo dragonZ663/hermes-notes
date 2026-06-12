@@ -47,7 +47,7 @@ def get_today_notes():
 
     cursor.execute("""
         SELECT * FROM notes 
-        WHERE date(created_at) = date('now', 'localtime', '-1 day')
+        WHERE date(created_at) = date('now', 'localtime')
         ORDER BY created_at DESC
     """)
 

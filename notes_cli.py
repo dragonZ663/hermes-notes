@@ -2,19 +2,18 @@
 """
 Hermes Notes CLI - 命令行工具
 """
-
 import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 
 from notes_api import (
     create_note, get_note, search_notes_in_content,
-    list_all_notes, get_stats, delete_note, update_note
+    list_all_notes, get_stats, delete_note, update_note,
+    search_notes, get_note_count
 )
 from datetime import datetime
 import json
 
-# 获取 API 目录
 API_DIR = os.path.dirname(__file__)
 
 
@@ -26,7 +25,7 @@ def cmd_create(title, content, tags=None, source="cli"):
     if not content:
         print("❌ 错误：内容不能为空")
         return
-    
+
     result = create_note(title, content, tags, source)
     print(f"\n✅ 笔记已创建：")
     print(f"   📝 标题：{result['title']}")
@@ -49,32 +48,38 @@ def cmd_read(note_id):
         print(f"❌ 笔记不存在：ID {note_id}")
 
 
-def cmd_search(query):
-    """搜索笔记"""
+def cmd_search(query, fields="all"):
+    """搜索笔记（FTS5 全文搜索）"""
     if len(query) < 2:
         print("🔍 搜索查询至少需要 2 个字符")
         return
-    
-    notes = search_notes_in_content(query)
+
+    notes = search_notes(query, fields=fields)
     if not notes:
         print(f"❌ 未找到包含 '{query}' 的笔记")
         return
-    
-    print(f"\n🔍 找到 {len(notes)} 个结果:\n" + "=" * 60)
+
+    print(f"\n🔍 找到 {len(notes)} 个结果（FTS5 全文搜索）:\n" + "=" * 60)
     for note in notes:
+        tags = ', '.join(note['tags']) if note['tags'] else '无'
         print(f"\n📝 [{note['id']}] {note['title']}")
-        print(f"   🏷️  标签：{', '.join(note['tags']) if note['tags'] else '无'}")
+        print(f"   🏷️  标签：{tags}")
         print(f"   📄 内容：{note['content']}")
+        if note.get('rank') is not None:
+            print(f"   📊 相关度：{note['rank']:.2f}")
 
 
-def cmd_list(limit=10):
-    """列出最近笔记"""
-    notes = list_all_notes(limit)
+def cmd_list(limit=10, offset=0):
+    """列出笔记（支持分页）"""
+    notes = list_all_notes(limit, offset)
+    total = get_note_count()
     if not notes:
         print("📭 暂无笔记")
         return
-    
-    print(f"\n📚 最近 {len(notes)} 条笔记\n" + "=" * 60)
+
+    page_end = min(offset + limit, total)
+    page_info = f"(第 {offset+1}-{page_end} 条，共 {total} 条)"
+    print(f"\n📚 {page_info}\n" + "=" * 60)
     for note in notes:
         print(f"\n📝 [{note['id']}] {note['title']}")
         print(f"   🏷️  标签：{', '.join(note['tags']) if note['tags'] else '无'}")
@@ -115,11 +120,10 @@ def cmd_update(note_id, title=None, content=None, tags=None):
         print(f"❌ 笔记不存在：ID {note_id}")
 
 
-# 主程序
 def cli_main():
-    """CLI 入口（供 console_scripts 使用）"""
+    """CLI 入口"""
     import argparse
-    parser = argparse.ArgumentParser(description="Hermes Notes CLI")
+    parser = argparse.ArgumentParser(description="Hermes Notes CLI v1.1 — FTS5 全文搜索 + 分页")
     sub = parser.add_subparsers(dest="command")
 
     p_create = sub.add_parser("create", help="创建笔记")
@@ -130,11 +134,14 @@ def cli_main():
     p_read = sub.add_parser("read", help="读取笔记")
     p_read.add_argument("id", type=int, help="笔记 ID")
 
-    p_search = sub.add_parser("search", help="搜索笔记")
+    p_search = sub.add_parser("search", help="搜索笔记（FTS5 全文搜索）")
     p_search.add_argument("query", help="搜索关键词")
+    p_search.add_argument("--fields", default="all", choices=["all", "title", "content", "tags"],
+                        help="搜索范围：all(全部)/title/content/tags")
 
     p_list = sub.add_parser("list", help="列出笔记")
     p_list.add_argument("--limit", type=int, default=10, help="数量限制")
+    p_list.add_argument("--offset", type=int, default=0, help="分页偏移量")
 
     p_stats = sub.add_parser("stats", help="统计信息")
 
@@ -154,9 +161,9 @@ def cli_main():
     elif args.command == "read":
         cmd_read(args.id)
     elif args.command == "search":
-        cmd_search(args.query)
+        cmd_search(args.query, args.fields)
     elif args.command == "list":
-        cmd_list(args.limit)
+        cmd_list(args.limit, args.offset)
     elif args.command == "stats":
         cmd_stats()
     elif args.command == "delete":
@@ -164,7 +171,7 @@ def cli_main():
     elif args.command == "update":
         cmd_update(args.id, title=args.title, content=args.content, tags=args.tags)
     else:
-        print("🔵 Hermes Notes CLI v1.0")
+        print("🔵 Hermes Notes CLI v1.1 — FTS5 全文搜索 + 分页")
         parser.print_help()
 
 

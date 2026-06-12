@@ -11,6 +11,7 @@ import sqlite3
 import json
 import os
 import re
+import shutil
 from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
@@ -61,8 +62,29 @@ def get_tag_stats(notes):
     return dict(sorted(tag_notes.items()))
 
 
+def strip_leading_h1(content, title):
+    """如果内容开头有和标题重复的 H1，去掉它（防御性去重）"""
+    lines = content.split("\n")
+    cleaned = []
+    seen_h1 = False
+    for line in lines:
+        stripped = line.strip()
+        if not seen_h1 and stripped.startswith("# ") and stripped[2:].strip() == title:
+            seen_h1 = True
+            continue
+        if not seen_h1 and stripped == "":
+            continue
+        cleaned.append(line)
+    return "\n".join(cleaned) if seen_h1 else content
+
+
 def generate_note_files(notes):
     """为每篇笔记生成 Vitepress markdown 文件"""
+    # 清空旧文件，防止残留
+    if NOTES_OUT.exists():
+        for f in NOTES_OUT.iterdir():
+            if f.name != "index.md":  # index.md 由 generate_notes_index 生成
+                f.unlink()
     NOTES_OUT.mkdir(parents=True, exist_ok=True)
 
     for note in notes:
@@ -72,6 +94,9 @@ def generate_note_files(notes):
         tags = note.get("tags", [])
         created = note.get("created_at", "")
         source = note.get("source", "")
+
+        # 防御性去重：如果内容以 # title 开头，去掉它
+        content = strip_leading_h1(content, title)
 
         # 安全文件名
         slug = re.sub(r'[<>:"/\\|?*\s]+', '-', title)[:60].strip('-')
@@ -88,9 +113,10 @@ source: "{source}"
 tags:
 {tags_yaml}
 ---
+
 """
 
-        md = frontmatter + f"\n# {title}\n\n" + content
+        md = frontmatter + f"# {title}\n\n" + content
         filepath.write_text(md, encoding="utf-8")
 
     return len(notes)
@@ -124,6 +150,11 @@ def generate_notes_index(notes):
 
 def generate_tag_pages(notes, tag_stats):
     """生成标签页面"""
+    # 清空旧标签文件
+    if TAGS_OUT.exists():
+        for f in TAGS_OUT.iterdir():
+            if f.name != "index.md":
+                f.unlink()
     TAGS_OUT.mkdir(parents=True, exist_ok=True)
 
     # 标签总览页
@@ -234,7 +265,7 @@ features:
 
 
 def sync_vitepress():
-    """主同步流程"""
+    """主同步流程（先清理旧文件，再全量生成）"""
     print("🔄 正在同步笔记到 Vitepress...")
 
     notes = get_all_notes()
