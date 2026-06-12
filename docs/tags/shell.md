@@ -1,8 +1,7 @@
-# 🏷️ cli
+# 🏷️ shell
 
-共 **2** 篇笔记。
+共 **1** 篇笔记。
 
 | # | 标题 | 日期 |
 |---|------|------|
 | 1 | [python -c 与 Heredoc：Python 命令行执行方式详解](/notes/0014-python--c-与-Heredoc：Python-命令行执行方式详解) | 2026-06-11 |
-| 2 | [Hermes Notes CLI](/notes/0004-Hermes-Notes-CLI) | 2026-06-07 |

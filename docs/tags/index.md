@@ -1,6 +1,6 @@
 # 🏷️ 标签分类
 
-共 **27** 个标签，**10** 篇笔记。
+共 **28** 个标签，**11** 篇笔记。
 
 | 标签 | 笔记数 |
 |------|--------|
@@ -11,7 +11,7 @@
 | [architecture](/tags/architecture) | 2 |
 | [career-switch](/tags/career-switch) | 1 |
 | [ci-cd](/tags/ci-cd) | 1 |
-| [cli](/tags/cli) | 1 |
+| [cli](/tags/cli) | 2 |
 | [debugging](/tags/debugging) | 1 |
 | [devops](/tags/devops) | 1 |
 | [docker](/tags/docker) | 1 |
@@ -23,7 +23,8 @@
 | [network](/tags/network) | 1 |
 | [notes](/tags/notes) | 1 |
 | [pip](/tags/pip) | 1 |
-| [python](/tags/python) | 3 |
+| [python](/tags/python) | 4 |
+| [shell](/tags/shell) | 1 |
 | [tunnel](/tags/tunnel) | 1 |
 | [tutorial](/tags/tutorial) | 1 |
 | [usage](/tags/usage) | 1 |
