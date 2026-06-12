@@ -145,6 +145,41 @@ EOF
 # 输出: $HOME
 ```
 
+### 定界符命名（为什么叫 PYEOF）
+
+`<<PYEOF` 和结尾的 `PYEOF` 是 **Heredoc 的定界符（delimiter）**，成对出现，把中间的内容当作标准输入传给 `python3`。
+
+**PYEOF** = **PY**thon + **EOF**（End Of File，文件结束），只是自定义的名字，没特殊含义。
+
+可以换成任何词：
+
+```bash
+# 随便换，都一样
+python3 <<HERMES
+print("hello")
+HERMES
+
+python3 <<BOSS
+print("hello")
+BOSS
+
+python3 <<END
+print("hello")
+END
+```
+
+### 约定俗成的习惯
+
+| 定界符 | 用途 |
+|--------|------|
+| `<<EOF` | 通用 |
+| `<<PYEOF` | Python 代码 |
+| `<<'EOF'` | 不展开变量 |
+| `<<SQL` | SQL 语句 |
+| `<<JSON` | JSON 数据 |
+
+`PYEOF` 对 Python 毫无意义，它只是 **shell 的分隔标记**。Shell 把两个定界符之间的内容原样送到命令的标准输入，命令收到后直接当成脚本解释。
+
 ### Heredoc vs `-c`
 
 | 方式 | 适用场景 |
