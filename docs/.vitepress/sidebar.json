@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Playwright Locator 选择策略与 ARIA ...",
+        "link": "/notes/0016-Playwright-Locator-选择策略与-ARIA-Role-详解"
+      },
+      {
         "text": "Shell 重定向详解：>、2>&1 与日志记录",
         "link": "/notes/0015-Shell-重定向详解：-、2-&1-与日志记录"
       },
@@ -38,10 +42,6 @@
       {
         "text": "HTTPS 页面下 HTTP 请求被阻止（Mixed Con...",
         "link": "/notes/0007-HTTPS-页面下-HTTP-请求被阻止（Mixed-Content）的原因与解决方案"
-      },
-      {
-        "text": "详解：从本地笔记到GitHub Pages — Vitepr...",
-        "link": "/notes/0006-详解：从本地笔记到GitHub-Pages-—-Vitepress自动化部署全流程"
       }
     ]
   },
@@ -72,6 +72,10 @@
       {
         "text": "architecture (2)",
         "link": "/tags/architecture"
+      },
+      {
+        "text": "automation (1)",
+        "link": "/tags/automation"
       },
       {
         "text": "career-switch (1)",
@@ -128,10 +132,6 @@
       {
         "text": "notes (1)",
         "link": "/tags/notes"
-      },
-      {
-        "text": "pip (1)",
-        "link": "/tags/pip"
       }
     ]
   },
