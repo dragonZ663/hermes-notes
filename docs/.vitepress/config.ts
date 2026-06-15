@@ -11,6 +11,14 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['style', {}, `
+      /* 笔记列表表格 — 最后一列(日期)增加最小宽度 */
+      .vp-doc table td:nth-child(4),
+      .vp-doc table th:nth-child(4) {
+        white-space: nowrap;
+        min-width: 110px;
+      }
+    `],
   ],
 
   themeConfig: {
