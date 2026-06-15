@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Shell 重定向详解：>、2>&1 与日志记录",
+        "link": "/notes/0015-Shell-重定向详解：-、2-&1-与日志记录"
+      },
+      {
         "text": "python -c 与 Heredoc：Python 命令行...",
         "link": "/notes/0014-python--c-与-Heredoc：Python-命令行执行方式详解"
       },
@@ -38,10 +42,6 @@
       {
         "text": "详解：从本地笔记到GitHub Pages — Vitepr...",
         "link": "/notes/0006-详解：从本地笔记到GitHub-Pages-—-Vitepress自动化部署全流程"
-      },
-      {
-        "text": "Hermes Notes 公网访问方案分析",
-        "link": "/notes/0005-Hermes-Notes-公网访问方案分析"
       }
     ]
   },
@@ -82,7 +82,7 @@
         "link": "/tags/ci-cd"
       },
       {
-        "text": "cli (2)",
+        "text": "cli (3)",
         "link": "/tags/cli"
       },
       {
@@ -118,6 +118,10 @@
         "link": "/tags/langchain"
       },
       {
+        "text": "linux (1)",
+        "link": "/tags/linux"
+      },
+      {
         "text": "network (1)",
         "link": "/tags/network"
       },
@@ -128,10 +132,6 @@
       {
         "text": "pip (1)",
         "link": "/tags/pip"
-      },
-      {
-        "text": "python (4)",
-        "link": "/tags/python"
       }
     ]
   },
