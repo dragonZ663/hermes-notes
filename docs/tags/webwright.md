@@ -1,7 +1,8 @@
-# 🏷️ webwright
+# 🏷️ Webwright
 
-共 **1** 篇笔记。
+共 **2** 篇笔记。
 
 | # | 标题 | 日期 |
 |---|------|------|
-| 1 | [WebWright 主流程分析](/notes/0013-WebWright-主流程分析) | 2026-06-11 |
+| 1 | [Webwright 浅析 —— 微软开源 Web Agent 框架](/notes/0017-Webwright-浅析-——-微软开源-Web-Agent-框架) | 2026-06-21 |
+| 2 | [WebWright 主流程分析](/notes/0013-WebWright-主流程分析) | 2026-06-11 |

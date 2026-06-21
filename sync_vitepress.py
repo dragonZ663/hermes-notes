@@ -157,33 +157,46 @@ def generate_tag_pages(notes, tag_stats):
                 f.unlink()
     TAGS_OUT.mkdir(parents=True, exist_ok=True)
 
-    # 标签总览页
+    # 标签总览页（按小写 slug 去重，避免大小写冲突）
+    seen_slugs = set()
+    tag_index_items = []
+    for tag, tag_notes in tag_stats.items():
+        tag_slug = re.sub(r'[\s]+', '-', tag).lower()
+        if tag_slug not in seen_slugs:
+            seen_slugs.add(tag_slug)
+            tag_index_items.append((tag, tag_slug, len(tag_notes)))
+
     lines = [
         "# 🏷️ 标签分类",
         "",
-        f"共 **{len(tag_stats)}** 个标签，**{len(notes)}** 篇笔记。",
+        f"共 **{len(tag_index_items)}** 个标签，**{len(notes)}** 篇笔记。",
         "",
         "| 标签 | 笔记数 |",
         "|------|--------|"
     ]
-    for tag, tag_notes in tag_stats.items():
-        tag_slug = re.sub(r'[\s]+', '-', tag)
-        lines.append(f"| [{tag}](/tags/{tag_slug}) | {len(tag_notes)} |")
+    for tag, tag_slug, count in tag_index_items:
+        lines.append(f"| [{tag}](/tags/{tag_slug}) | {count} |")
 
     (TAGS_OUT / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    # 每个标签的独立页面
+    # 每个标签的独立页面（按小写合并）
+    merged = {}
     for tag, tag_notes in tag_stats.items():
-        tag_slug = re.sub(r'[\s]+', '-', tag)
+        tag_slug = re.sub(r'[\s]+', '-', tag).lower()
+        if tag_slug not in merged:
+            merged[tag_slug] = {"display": tag, "notes": []}
+        merged[tag_slug]["notes"].extend(tag_notes)
+
+    for tag_slug, info in merged.items():
         tag_lines = [
-            f"# 🏷️ {tag}",
+            f"# 🏷️ {info['display']}",
             "",
-            f"共 **{len(tag_notes)}** 篇笔记。",
+            f"共 **{len(info['notes'])}** 篇笔记。",
             "",
             "| # | 标题 | 日期 |",
             "|---|------|------|"
         ]
-        for i, note in enumerate(tag_notes, 1):
+        for i, note in enumerate(info["notes"], 1):
             note_id = note["id"]
             title = note["title"]
             slug = re.sub(r'[<>:"/\\|?*\s]+', '-', title)[:60].strip('-')
@@ -210,10 +223,14 @@ def generate_sidebar(notes, tag_stats):
         })
     sidebar.append({"text": "📝 最新笔记", "collapsed": False, "items": recent_items})
 
-    # 标签分类
+    # 标签分类（小写 slug，避免大小写冲突）
     tag_items = [{"text": "🏷️ 标签总览", "link": "/tags/"}]
-    for tag in list(tag_stats.keys())[:20]:
-        tag_slug = re.sub(r'[\s]+', '-', tag)
+    seen_slugs = set()
+    for tag in list(tag_stats.keys())[:30]:
+        tag_slug = re.sub(r'[\s]+', '-', tag).lower()
+        if tag_slug in seen_slugs:
+            continue
+        seen_slugs.add(tag_slug)
         count = len(tag_stats[tag])
         tag_items.append({
             "text": f"{tag} ({count})",

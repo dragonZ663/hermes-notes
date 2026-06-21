@@ -55,19 +55,19 @@
       },
       {
         "text": "AI测试 (1)",
-        "link": "/tags/AI测试"
+        "link": "/tags/ai测试"
       },
       {
         "text": "Playwright (1)",
-        "link": "/tags/Playwright"
+        "link": "/tags/playwright"
       },
       {
         "text": "WebAgent (1)",
-        "link": "/tags/WebAgent"
+        "link": "/tags/webagent"
       },
       {
         "text": "Webwright (1)",
-        "link": "/tags/Webwright"
+        "link": "/tags/webwright"
       },
       {
         "text": "agent (1)",
@@ -132,6 +132,42 @@
       {
         "text": "https (1)",
         "link": "/tags/https"
+      },
+      {
+        "text": "langchain (1)",
+        "link": "/tags/langchain"
+      },
+      {
+        "text": "linux (1)",
+        "link": "/tags/linux"
+      },
+      {
+        "text": "network (1)",
+        "link": "/tags/network"
+      },
+      {
+        "text": "notes (1)",
+        "link": "/tags/notes"
+      },
+      {
+        "text": "pip (1)",
+        "link": "/tags/pip"
+      },
+      {
+        "text": "python (4)",
+        "link": "/tags/python"
+      },
+      {
+        "text": "shell (2)",
+        "link": "/tags/shell"
+      },
+      {
+        "text": "testing (1)",
+        "link": "/tags/testing"
+      },
+      {
+        "text": "tunnel (1)",
+        "link": "/tags/tunnel"
       }
     ]
   },

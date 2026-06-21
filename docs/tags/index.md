@@ -1,13 +1,13 @@
 # 🏷️ 标签分类
 
-共 **38** 个标签，**14** 篇笔记。
+共 **36** 个标签，**14** 篇笔记。
 
 | 标签 | 笔记数 |
 |------|--------|
-| [AI测试](/tags/AI测试) | 1 |
-| [Playwright](/tags/Playwright) | 1 |
-| [WebAgent](/tags/WebAgent) | 1 |
-| [Webwright](/tags/Webwright) | 1 |
+| [AI测试](/tags/ai测试) | 1 |
+| [Playwright](/tags/playwright) | 1 |
+| [WebAgent](/tags/webagent) | 1 |
+| [Webwright](/tags/webwright) | 1 |
 | [agent](/tags/agent) | 1 |
 | [ai-dev](/tags/ai-dev) | 1 |
 | [ai-learning-plan](/tags/ai-learning-plan) | 1 |
@@ -29,7 +29,6 @@
 | [network](/tags/network) | 1 |
 | [notes](/tags/notes) | 1 |
 | [pip](/tags/pip) | 1 |
-| [playwright](/tags/playwright) | 1 |
 | [python](/tags/python) | 4 |
 | [shell](/tags/shell) | 2 |
 | [testing](/tags/testing) | 1 |
@@ -39,6 +38,5 @@
 | [vitepress](/tags/vitepress) | 2 |
 | [vscode](/tags/vscode) | 1 |
 | [web-security](/tags/web-security) | 1 |
-| [webwright](/tags/webwright) | 1 |
 | [微软研究院](/tags/微软研究院) | 1 |
 | [自动化测试](/tags/自动化测试) | 1 |
