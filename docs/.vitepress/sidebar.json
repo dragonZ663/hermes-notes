@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Webwright 浅析 —— 微软开源 Web Agent...",
+        "link": "/notes/0017-Webwright-浅析-——-微软开源-Web-Agent-框架"
+      },
+      {
         "text": "Playwright Locator 选择策略与 ARIA ...",
         "link": "/notes/0016-Playwright-Locator-选择策略与-ARIA-Role-详解"
       },
@@ -38,10 +42,6 @@
       {
         "text": "AI 应用开发工程师 · 学习计划（修正版 v3）",
         "link": "/notes/0008-AI-应用开发工程师-·-学习计划（修正版-v3）"
-      },
-      {
-        "text": "HTTPS 页面下 HTTP 请求被阻止（Mixed Con...",
-        "link": "/notes/0007-HTTPS-页面下-HTTP-请求被阻止（Mixed-Content）的原因与解决方案"
       }
     ]
   },
@@ -52,6 +52,22 @@
       {
         "text": "🏷️ 标签总览",
         "link": "/tags/"
+      },
+      {
+        "text": "AI测试 (1)",
+        "link": "/tags/AI测试"
+      },
+      {
+        "text": "Playwright (1)",
+        "link": "/tags/Playwright"
+      },
+      {
+        "text": "WebAgent (1)",
+        "link": "/tags/WebAgent"
+      },
+      {
+        "text": "Webwright (1)",
+        "link": "/tags/Webwright"
       },
       {
         "text": "agent (1)",
@@ -116,22 +132,6 @@
       {
         "text": "https (1)",
         "link": "/tags/https"
-      },
-      {
-        "text": "langchain (1)",
-        "link": "/tags/langchain"
-      },
-      {
-        "text": "linux (1)",
-        "link": "/tags/linux"
-      },
-      {
-        "text": "network (1)",
-        "link": "/tags/network"
-      },
-      {
-        "text": "notes (1)",
-        "link": "/tags/notes"
       }
     ]
   },

@@ -1,9 +1,13 @@
 # 🏷️ 标签分类
 
-共 **32** 个标签，**13** 篇笔记。
+共 **38** 个标签，**14** 篇笔记。
 
 | 标签 | 笔记数 |
 |------|--------|
+| [AI测试](/tags/AI测试) | 1 |
+| [Playwright](/tags/Playwright) | 1 |
+| [WebAgent](/tags/WebAgent) | 1 |
+| [Webwright](/tags/Webwright) | 1 |
 | [agent](/tags/agent) | 1 |
 | [ai-dev](/tags/ai-dev) | 1 |
 | [ai-learning-plan](/tags/ai-learning-plan) | 1 |
@@ -36,3 +40,5 @@
 | [vscode](/tags/vscode) | 1 |
 | [web-security](/tags/web-security) | 1 |
 | [webwright](/tags/webwright) | 1 |
+| [微软研究院](/tags/微软研究院) | 1 |
+| [自动化测试](/tags/自动化测试) | 1 |
