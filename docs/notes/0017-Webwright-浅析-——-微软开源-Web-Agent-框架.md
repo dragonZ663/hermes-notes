@@ -161,17 +161,29 @@ python -m webwright.run.cli \
 
 **配置层叠顺序**：后面的覆盖前面的 → `recursive_merge()` 深度合并。
 
-**配置文件清单**：
+**配置分层体系**（两项叠加：**环境层** + **模型层**，缺一不可）：
 
-| 配置文件 | 用途 | 是否可单独运行 |
-|----------|------|:------------:|
-| `base.yaml` | **核心基础配置**，模型无关 | ❌ 须叠加模型配置 |
-| `model_claude.yaml` | Claude (Anthropic) 模型层 | ❌ 须叠加 |
-| `model_openai.yaml` | GPT (OpenAI) 模型层 | ❌ 须叠加 |
-| `local_browser.yaml` | **实时浏览器模式** | ❌ 须叠加 |
-| `task_showcase.yaml` | 生成结构化 Dashboard 报告 | ❌ 须叠加 |
-| `custom_openrouter.yaml` | 自定义 OpenRouter（如 Qwen） | ❌ 须叠加 |
-| `crafted_cli.yaml` | **CLI 工具模式**（下面 2.6 节详解） | ❌ 须叠加 + base.yaml |
+**环境层**（选择一种模式）：
+| 配置文件 | 用途 | 示例搭配 |
+|----------|------|:--------:|
+| `base.yaml` | **标准工作区模式**（默认），输出 final_script.py + 截图 + 裁判 | `base.yaml` + model |
+| `persistent_browser.yaml` | **持久浏览器工作区模式**，浏览器跨步骤保持状态，其余同 base.yaml | `persistent_browser.yaml` + model |
+| `local_browser.yaml` | **实时浏览器模式**，无工作区、无产物、Agent 直接驱动页面 | `local_browser.yaml` + model |
+
+**模型层**（选择一种后端）：
+| 配置文件 | LLM 后端 | 环境变量 |
+|----------|----------|:--------:|
+| `model_claude.yaml` | Claude (Anthropic) | `ANTHROPIC_API_KEY` |
+| `model_openai.yaml` | GPT (OpenAI) | `OPENAI_API_KEY` |
+| `custom_openrouter.yaml` | 自定义端点（如 Qwen/DashScope） | `OPENROUTER_API_KEY` |
+
+**特性层**（可选叠加，增强输出）：
+| 配置文件 | 用途 | 依赖 |
+|----------|------|:----:|
+| `task_showcase.yaml` | 生成结构化 Dashboard 报告 | 环境层 + 模型层 |
+| `crafted_cli.yaml` | **CLI 工具生成模式**（见下文 2.6 节） | 环境层 + 模型层 |
+
+> 层叠规则：`-c 环境层 -c 模型层` 为基础命令，`-c 特性层` 可选追加。后加载的覆盖前面的同名字段。
 
 ### 2.3 一次完整运行
 
