@@ -208,6 +208,12 @@ outputs/demo_openai_20260621_143000/
 │   ├── merged_config.yaml
 │   ├── 00_base.yaml
 │   └── 01_model_openai.yaml
+├── debug/                     # 调试信息（默认开启，agent.debug_log 控制）
+│   ├── steps.md               # 所有 step 的 Markdown 累积日志（thought + code + observation）
+│   └── steps/                 # 每个 step 的结构化调试数据（JSON 格式）
+│       ├── step_0001.json
+│       ├── step_0002.json
+│       └── ...
 ├── final_script.py            # 🎯 最终产物：可重放的 Playwright 脚本
 ├── final_runs/
 │   └── run_001/
