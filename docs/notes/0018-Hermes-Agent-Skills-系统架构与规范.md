@@ -4,17 +4,8 @@ title: "Hermes Agent Skills 系统架构与规范"
 created: "2026-06-30 14:57:11"
 source: "cli"
 tags:
-  - S
-  - K
-  - I
-  - L
-  - L
-  - ,
-  - 渐
-  - 进
-  - 式
-  - 披
-  - 露
+  - SKILL
+  - 渐进式披露
 ---
 
 # Hermes Agent Skills 系统架构与规范

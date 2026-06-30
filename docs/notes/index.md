@@ -4,7 +4,7 @@
 
 | # | 标题 | 标签 | 日期 |
 |---|------|------|------|
-| 1 | [Hermes Agent Skills 系统架构与规范](/notes/0018-Hermes-Agent-Skills-系统架构与规范) | `S` `K` `I` `L` `L` `,` `渐` `进` `式` `披` `露` | 2026-06-30 |
+| 1 | [Hermes Agent Skills 系统架构与规范](/notes/0018-Hermes-Agent-Skills-系统架构与规范) | `SKILL` `渐进式披露` | 2026-06-30 |
 | 2 | [Webwright 浅析 —— 微软开源 Web Agent 框架](/notes/0017-Webwright-浅析-——-微软开源-Web-Agent-框架) | `Webwright` `WebAgent` `AI测试` `Playwright` `自动化测试` `微软研究院` | 2026-06-21 |
 | 3 | [Playwright Locator 选择策略与 ARIA Role 详解](/notes/0016-Playwright-Locator-选择策略与-ARIA-Role-详解) | `playwright` `testing` `automation` | 2026-06-15 |
 | 4 | [Shell 重定向详解：>、2>&1 与日志记录](/notes/0015-Shell-重定向详解：-、2-&1-与日志记录) | `shell` `linux` `cli` | 2026-06-15 |

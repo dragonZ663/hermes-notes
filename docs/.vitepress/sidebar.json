@@ -54,32 +54,16 @@
         "link": "/tags/"
       },
       {
-        "text": ", (1)",
-        "link": "/tags/,"
-      },
-      {
         "text": "AI测试 (1)",
         "link": "/tags/ai测试"
-      },
-      {
-        "text": "I (1)",
-        "link": "/tags/i"
-      },
-      {
-        "text": "K (1)",
-        "link": "/tags/k"
-      },
-      {
-        "text": "L (2)",
-        "link": "/tags/l"
       },
       {
         "text": "Playwright (1)",
         "link": "/tags/playwright"
       },
       {
-        "text": "S (1)",
-        "link": "/tags/s"
+        "text": "SKILL (1)",
+        "link": "/tags/skill"
       },
       {
         "text": "WebAgent (1)",
@@ -172,6 +156,18 @@
       {
         "text": "pip (1)",
         "link": "/tags/pip"
+      },
+      {
+        "text": "python (4)",
+        "link": "/tags/python"
+      },
+      {
+        "text": "shell (2)",
+        "link": "/tags/shell"
+      },
+      {
+        "text": "testing (1)",
+        "link": "/tags/testing"
       }
     ]
   },
