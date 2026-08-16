@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "LangChain Agent 状态管理与部署并发笔记",
+        "link": "/notes/0019-LangChain-Agent-状态管理与部署并发笔记"
+      },
+      {
         "text": "Hermes Agent Skills 系统架构与规范",
         "link": "/notes/0018-Hermes-Agent-Skills-系统架构与规范"
       },
@@ -38,10 +42,6 @@
       {
         "text": "pip install -e . — 详解可编辑安装模式",
         "link": "/notes/0010-pip-install--e-.-—-详解可编辑安装模式"
-      },
-      {
-        "text": "Deep Agents vs Hermes Agent — ...",
-        "link": "/notes/0009-Deep-Agents-vs-Hermes-Agent-—-能力对比"
       }
     ]
   },
@@ -58,6 +58,14 @@
         "link": "/tags/ai测试"
       },
       {
+        "text": "Agent (1)",
+        "link": "/tags/agent"
+      },
+      {
+        "text": "LangChain (1)",
+        "link": "/tags/langchain"
+      },
+      {
         "text": "Playwright (1)",
         "link": "/tags/playwright"
       },
@@ -72,10 +80,6 @@
       {
         "text": "Webwright (1)",
         "link": "/tags/webwright"
-      },
-      {
-        "text": "agent (1)",
-        "link": "/tags/agent"
       },
       {
         "text": "ai-dev (1)",
@@ -138,10 +142,6 @@
         "link": "/tags/https"
       },
       {
-        "text": "langchain (1)",
-        "link": "/tags/langchain"
-      },
-      {
         "text": "linux (1)",
         "link": "/tags/linux"
       },
@@ -160,14 +160,6 @@
       {
         "text": "python (4)",
         "link": "/tags/python"
-      },
-      {
-        "text": "shell (2)",
-        "link": "/tags/shell"
-      },
-      {
-        "text": "testing (1)",
-        "link": "/tags/testing"
       }
     ]
   },

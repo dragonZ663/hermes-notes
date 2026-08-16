@@ -1,15 +1,16 @@
 # 🏷️ 标签分类
 
-共 **38** 个标签，**15** 篇笔记。
+共 **39** 个标签，**16** 篇笔记。
 
 | 标签 | 笔记数 |
 |------|--------|
 | [AI测试](/tags/ai测试) | 1 |
+| [Agent](/tags/agent) | 1 |
+| [LangChain](/tags/langchain) | 1 |
 | [Playwright](/tags/playwright) | 1 |
 | [SKILL](/tags/skill) | 1 |
 | [WebAgent](/tags/webagent) | 1 |
 | [Webwright](/tags/webwright) | 1 |
-| [agent](/tags/agent) | 1 |
 | [ai-dev](/tags/ai-dev) | 1 |
 | [ai-learning-plan](/tags/ai-learning-plan) | 1 |
 | [analysis](/tags/analysis) | 1 |
@@ -25,7 +26,6 @@
 | [hermes-notes](/tags/hermes-notes) | 1 |
 | [http](/tags/http) | 1 |
 | [https](/tags/https) | 1 |
-| [langchain](/tags/langchain) | 1 |
 | [linux](/tags/linux) | 1 |
 | [network](/tags/network) | 1 |
 | [notes](/tags/notes) | 1 |
@@ -39,6 +39,7 @@
 | [vitepress](/tags/vitepress) | 2 |
 | [vscode](/tags/vscode) | 1 |
 | [web-security](/tags/web-security) | 1 |
+| [并发](/tags/并发) | 1 |
 | [微软研究院](/tags/微软研究院) | 1 |
 | [渐进式披露](/tags/渐进式披露) | 1 |
 | [自动化测试](/tags/自动化测试) | 1 |
